@@ -22,7 +22,7 @@ const CustomerSignup = () => {
         const formData = new FormData();
         formData.append("customerPic", profilePic);
         const response = await axios.post(
-          "http://localhost:4001/api/customers/upload-profile-pic",
+          "https://merchant-customer.vercel.app/api/customers/upload-profile-pic",
           formData,
           {
             headers: {
@@ -48,7 +48,7 @@ const CustomerSignup = () => {
     
         try { 
           const response = await axios.post(
-            "http://localhost:4001/api/customers/signup",
+            "https://merchant-customer.vercel.app/api/customers/signup",
             {
               name,
               email,

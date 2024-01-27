@@ -29,7 +29,7 @@ const AddProduct = () => {
       const formData = new FormData();
       formData.append("productPic", profilePic);
       const response = await axios.post(
-        "http://localhost:4001/api/merchants/upload-product-pic",
+        "https://merchant-customer.vercel.app/api/merchants/upload-product-pic",
         formData,
         {
           headers: {
@@ -61,7 +61,7 @@ const AddProduct = () => {
         navigate("/merchant/login");
       }
       const response = await axios.post(
-        "http://localhost:4001/api/merchants/add-product",
+        "https://merchant-customer.vercel.app/api/merchants/add-product",
         {
           name,
           category,

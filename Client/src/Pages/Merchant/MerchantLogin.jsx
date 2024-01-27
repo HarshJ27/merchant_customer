@@ -15,7 +15,7 @@ const MerchantLogin = () => {
     setError(null);
     // Perform login logic here
     try {
-      const response= await axios.post("http://localhost:4001/api/merchants/login",
+      const response= await axios.post("https://merchant-customer.vercel.app/api/merchants/login",
       {
         email,
         password

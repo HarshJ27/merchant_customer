@@ -45,7 +45,7 @@ const YourEachProduct = () => {
       const fetchEachProduct = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:4001/api/merchants/products/${id}`,
+            `https://merchant-customer.vercel.app/api/merchants/products/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -84,7 +84,7 @@ const YourEachProduct = () => {
       const formData = new FormData();
       formData.append("productPic", profilePic);
       const response = await axios.post(
-        "http://localhost:4001/api/merchants/upload-product-pic",
+        "https://merchant-customer.vercel.app/api/merchants/upload-product-pic",
         formData,
         {
           headers: {
@@ -116,7 +116,7 @@ const YourEachProduct = () => {
         navigate("/merchant/login");
       }
       const response = await axios.put(
-        `http://localhost:4001/api/merchants/products/edit/${eachProduct?._id}`,
+        `https://merchant-customer.vercel.app/api/merchants/products/edit/${eachProduct?._id}`,
         {
           name,
           category,

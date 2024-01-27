@@ -34,7 +34,7 @@ const EachProduct = () => {
       const fetchEachProduct = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:4001/api/customers/products/${id}`,
+            `https://merchant-customer.vercel.app/api/customers/products/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,

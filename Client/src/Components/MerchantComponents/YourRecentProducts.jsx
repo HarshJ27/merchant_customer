@@ -14,7 +14,7 @@ const YourRecentProducts = () => {
           // No token found, redirect to login page
           navigate("/merchant/login");
         }
-        const response = await axios.get("http://localhost:4001/api/merchants/my-products", {
+        const response = await axios.get("https://merchant-customer.vercel.app/api/merchants/my-products", {
             headers: {
                 Authorization: `Bearer ${token}`
             }

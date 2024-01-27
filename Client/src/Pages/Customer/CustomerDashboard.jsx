@@ -44,7 +44,7 @@ const CustomerDashboard = () => {
             navigate("/customer/login");
           }
           const response = await axios.get(
-            "http://localhost:4001/api/customers/products",
+            "https://merchant-customer.vercel.app/api/customers/products",
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -78,7 +78,7 @@ const CustomerDashboard = () => {
   const fetchFilteredProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4001/api/customers/filtered-products",
+        "https://merchant-customer.vercel.app/api/customers/filtered-products",
         {
           headers: {
             Authorization: `Bearer ${token}`,
